@@ -83,6 +83,7 @@
 		fastfetch
 		heroic
 		gh
+		papirus-icon-theme
 	];
 
 	programs.bash = {
