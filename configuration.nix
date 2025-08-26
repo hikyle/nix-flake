@@ -100,6 +100,8 @@
 			lt = "eza -a --tree --level=1 --icons=always";
 			grep = "grep --color=always";
 			cat = "bat";
+			rebuild = "sudo nixos-rebuild switch --flake .";
+			update = "sudo nix flake update";
 		};
 	};
 
