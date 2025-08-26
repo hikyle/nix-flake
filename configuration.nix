@@ -67,7 +67,6 @@
 	};
 
 	environment.systemPackages = with pkgs; [
-		vim
 		wget
 		git
 		gnumake
@@ -84,10 +83,15 @@
 		heroic
 		gh
 		papirus-icon-theme
+		wl-clipboard
 	];
 
 	programs.bash = {
 		promptInit = ''
+			if [[ $(tty) == *"pts"* ]]; then
+				fastfetch
+			fi
+
 			export PS1='\[\e[38;5;76m\]\u\[\e[0m\] in \[\e[38;5;32m\]\w\[\e[0m\] \\$ '
 		'';
 		shellAliases = {
